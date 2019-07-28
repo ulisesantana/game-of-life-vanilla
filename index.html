@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+      body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        font-family: 'Fira Code', monospace;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .row {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: ". ." ". .";
+        margin: 0;
+        padding: 0;
+      }
+
+      .Led {
+        background-color: yellow;
+        border-radius: 100%;
+        display: block;
+        border: solid 2px black;
+        margin: 0;
+        padding: 0;
+        opacity: 0.2;
+        transition: all ease-in-out 0.33s;
+      }
+      .Led.active {
+        opacity: 1;
+        filter: drop-shadow(0 0 1vw yellow);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Game of Life</h1>
+    <div id="app"></div>
+
+    <script src="src/index.ts"></script>
+  </body>
+</html>
